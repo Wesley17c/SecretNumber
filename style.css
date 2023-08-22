@@ -1,0 +1,46 @@
+
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-background);
+    color: var(--cor-texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+
+}
+
+:root{
+    --fonte-principal: 'Inter', sans-serif;
+    --cor-background: #6528F7;
+    --cor-texto: #EDE4FF;
+
+}
+
+h1{
+    font-size: 3em;
+    padding-bottom: 1em;
+}
+
+h3{
+    font-size: 2em;
+    padding-bottom: 0.5em;
+}
+
+.mensagem{
+
+    font-size: 1.5em;
+    padding-bottom: 0.3em;
+}
+
+#box{
+    border: 2px solid var(--cor-texto);
+    display: inline-block;
+    font-size: 6em;
+    padding: 5px;
+    margin: 20px;
+}
