@@ -26,6 +26,11 @@ h1{
     padding-bottom: 1em;
 }
 
+h2{
+
+    font-size: 80px;
+}
+
 h3{
     font-size: 2em;
     padding-bottom: 0.5em;
@@ -37,10 +42,20 @@ h3{
     padding-bottom: 0.3em;
 }
 
-#box{
+.box{
     border: 2px solid var(--cor-texto);
     display: inline-block;
     font-size: 6em;
     padding: 5px;
     margin: 20px;
+}
+
+.btn-jogar{
+
+    padding: 8px 15px;
+    border: 0;
+    background-color: var(--cor-texto);
+    border-radius: 10px;
+    margin-top: 10px;
+
 }

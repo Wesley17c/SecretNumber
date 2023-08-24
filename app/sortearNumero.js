@@ -10,8 +10,9 @@ function gerarNumeroAleatorio(){
     // Gera um número aleatório entre 0 (inclusive) e 1 (exclusive),
     // multiplica pelo intervalo desejado e adiciona 1 para garantir que o resultado esteja dentro do intervalo
     return parseInt(Math.random() * maiorValor + 1);
+    
 }
-
+console.log(numeroSecreto)
 // Seleciona o elemento HTML com o id 'menorValor'
 const elementoMenorValor = document.getElementById('menorValor');
 // Atualiza o conteúdo do elemento com o valor de 'menorValor'

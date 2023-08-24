@@ -20,6 +20,8 @@ function onSpeak(e){
     // Obtém o texto transcrito da fala a partir dos resultados
     const chute = e.results[0][0].transcript;
     exibeChuteNaTela(chute);
+    verificaSeOChutePossuiUmValorValido(chute);
+
     
 }
 
@@ -28,6 +30,8 @@ function exibeChuteNaTela(chute){
     // Atualiza o conteúdo do elemento 'elementoChute' com o HTML gerado
     elementoChute.innerHTML = `
         <div> você disse: </div>
-        <span class="box"> ${chute} </span>
+        <span class="box"> ${chute}</span>
     `
 }
+
+recognition.addEventListener('end', ()=> recognition.start());
