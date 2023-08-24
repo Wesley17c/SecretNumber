@@ -14,7 +14,7 @@ function verificaSeOChutePossuiUmValorValido(chute){
     if(numeroMaiorOuMenorQueOValorPermitido(numero)){
        elementoChute.innerHTML += `
        
-       <div> valor inválido: o numero segredo precisa estar entre ${menorValor} e ${maiorValor} </div>
+       <div> valor inválido: o número segredo precisa estar entre ${menorValor} e ${maiorValor} </div>
 
        `
        return
@@ -24,7 +24,7 @@ function verificaSeOChutePossuiUmValorValido(chute){
 
         document.body.innerHTML =  `
          <h2> você acertou!!!</h2>
-         <h3> o numero secreto é </h2>
+         <h3> o número secreto é </h2>
          <span class="box"> ${numeroSecreto}</span> 
          <button id="jogar-novamente" class="btn-jogar"> Recomeçar partida </button>
         
@@ -35,7 +35,7 @@ function verificaSeOChutePossuiUmValorValido(chute){
         `
         <div> você disse: </div> 
         <span class="box"> ${chute}</span> 
-        <div> O numero secreto é menor <i class="fa-sharp fa-solid fa-arrow-down"></i> </div>
+        <div> O número secreto é menor <i class="fa-sharp fa-solid fa-arrow-down"></i> </div>
         `
 
     } else {
@@ -43,7 +43,7 @@ function verificaSeOChutePossuiUmValorValido(chute){
         `
         <div> você disse:</div>  
         <span class="box"> ${chute}</span> 
-        <div> O numero secreto é maior <i class="fa-sharp fa-solid fa-arrow-up"></i> </div>`
+        <div> O número secreto é maior <i class="fa-sharp fa-solid fa-arrow-up"></i> </div>`
 
 
     }
@@ -64,4 +64,4 @@ document.body.addEventListener('click', e => {
     if(e.target.id == 'jogar-novamente'){
         window.location.reload()
     }
-})
+});
