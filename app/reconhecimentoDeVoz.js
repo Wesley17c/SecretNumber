@@ -1,6 +1,6 @@
 const elementoChute = document.getElementById('chute');
 const ativarMic = document.getElementById('botaoDeFala');
-
+const historico = document.getElementById('historico');
 
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
@@ -31,6 +31,7 @@ function onSpeak(e){
     const chute = e.results[0][0].transcript;
     exibeChuteNaTela(chute);
     verificaSeOChutePossuiUmValorValido(chute);
+    adicionaAoHistorico(chute);
 
 }
 
@@ -43,7 +44,7 @@ function exibeChuteNaTela(chute){
     `
 }
 
-// ativando o btn de ativação do mic
+
 recognition.addEventListener('end', ()=> {
     
         if(ouvindo){
@@ -51,3 +52,9 @@ recognition.addEventListener('end', ()=> {
         }
             
 });
+
+function adicionaAoHistorico(numero) {
+    const novoItem = document.createElement('div');
+    novoItem.textContent = `Número registrado: ${numero}`;
+    historico.appendChild(novoItem);
+}
