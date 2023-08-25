@@ -45,7 +45,6 @@ function verificaSeOChutePossuiUmValorValido(chute){
         <span class="box"> ${chute}</span> 
         <div> O número secreto é maior <i class="fa-sharp fa-solid fa-arrow-up"></i> </div>`
 
-
     }
 
 }

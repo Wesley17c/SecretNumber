@@ -1,37 +1,53 @@
 const elementoChute = document.getElementById('chute');
+const ativarMic = document.getElementById('botaoDeFala');
 
-// Verifica se o navegador suporta a API de Reconhecimento de Fala
+
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+        recognition.lang = 'pt-br';
 
-// Cria uma instância da classe SpeechRecognition
-const recognition = new SpeechRecognition();
 
-// Define o idioma do reconhecimento como 'pt-br'
-recognition.lang = 'pt-br';
+    let ouvindo = false;    
 
-// Inicia o processo de reconhecimento de fala
-recognition.start();
+    ativarMic.addEventListener('click', () => {
+        if (!ouvindo) {
+            recognition.start();
+            ouvindo = true;
+            ativarMic.textContent = 'Ouvindo...';
+    
+            setTimeout(() => {
+                recognition.stop();
+                ouvindo = false;
+                ativarMic.textContent = 'Clique para ativar o microfone';
+            }, 5000); 
+        }
+    });
+                
+     recognition.addEventListener('result', onSpeak);
 
-// Adiciona um ouvinte para o evento 'result', que é acionado quando há resultados do reconhecimento
-recognition.addEventListener('result', onSpeak);
 
-// Função chamada quando há resultados de fala capturados
 function onSpeak(e){
-    // Obtém o texto transcrito da fala a partir dos resultados
+   
     const chute = e.results[0][0].transcript;
     exibeChuteNaTela(chute);
     verificaSeOChutePossuiUmValorValido(chute);
 
-    
 }
 
-// Função para exibir o texto transcrito na tela
+
 function exibeChuteNaTela(chute){
-    // Atualiza o conteúdo do elemento 'elementoChute' com o HTML gerado
+    
     elementoChute.innerHTML = `
         <div> você disse: </div>
         <span class="box"> ${chute}</span>
     `
 }
 
-recognition.addEventListener('end', ()=> recognition.start());
+// ativando o btn de ativação do mic
+recognition.addEventListener('end', ()=> {
+    
+        if(ouvindo){
+            recognition.start();
+        }
+            
+});

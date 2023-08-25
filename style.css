@@ -57,5 +57,19 @@ h3{
     background-color: var(--cor-texto);
     border-radius: 10px;
     margin-top: 10px;
-
 }
+
+#botaoDeFala {
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 0;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.452);
+    margin-top: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#botaoDeFala:hover {
+    background-color: var(--cor-texto);
+    transform: scale(1.05);
+}
+
