@@ -19,7 +19,7 @@ window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogn
                 recognition.stop();
                 ouvindo = false;
                 ativarMic.textContent = 'Clique para ativar o microfone';
-            }, 5000); 
+            }, 3500); 
         }
     });
                 
