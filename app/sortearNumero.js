@@ -15,3 +15,4 @@ const elementoMenorValor = document.getElementById('menorValor');
 
 const elementoMaiorValor = document.getElementById('maiorValor');
     elementoMaiorValor.innerHTML = maiorValor;
+

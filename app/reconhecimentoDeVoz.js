@@ -2,6 +2,7 @@ const elementoChute = document.getElementById('chute');
 const ativarMic = document.getElementById('botaoDeFala');
 const historico = document.getElementById('historico');
 
+
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
         recognition.lang = 'pt-br';
@@ -55,6 +56,6 @@ recognition.addEventListener('end', ()=> {
 
 function adicionaAoHistorico(numero) {
     const novoItem = document.createElement('div');
-    novoItem.textContent = `Número registrado: ${numero}`;
+    novoItem.innerHTML = `<p class='paragrafo'>Número registrado: ${numero}</p>`;
     historico.appendChild(novoItem);
 }

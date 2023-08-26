@@ -29,6 +29,8 @@ function verificaSeOChutePossuiUmValorValido(chute){
          <button id="jogar-novamente" class="btn-jogar"> Recomeçar partida </button>
 
         `
+        
+
 
     } else if( numero > numeroSecreto){
         elementoChute.innerHTML =
@@ -64,3 +66,4 @@ document.body.addEventListener('click', e => {
         window.location.reload();
     }
 });
+
