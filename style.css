@@ -123,4 +123,46 @@ h3{
     #historico {
         font-size: 20px;
     }
+
+    
+.paragrafo{
+    font-size: 12px;
+    font-weight: 400;
+}
+}
+
+
+@media screen and (max-width: 400px) {
+   
+    h1 {
+        font-size: 1.4em;
+    }
+
+    h2 {
+        font-size: 
+        20px;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    .mensagem {
+        font-size: 1em;
+    }
+
+    .box {
+        font-size: 2em;
+        margin: 10px;
+    }
+
+    #historico {
+        font-size: 15px;
+    }
+
+    
+.paragrafo{
+    font-size: 10px;
+    font-weight: 400;
+}
 }
